@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calculate your software project scope and estimated investment with NEXVORA TECHNOLOGIES' interactive quote calculator.">
+  <title>Start a Project &amp; Get a Quote — NEXVORA TECHNOLOGIES</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+  <!-- Top Sticky Header -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="NEXVORA TECHNOLOGIES Home">
+        <img src="9600f248-9e25-4836-9e12-b158c3783639.png" alt="NEXVORA Logo" class="brand-logo-img">
+        <span>NEXVORA<span class="highlight">.TECH</span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="solutions.html" class="nav-link">Solutions</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="team.html" class="nav-link">Team</a></li>
+          <li><a href="careers.html" class="nav-link">Careers</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item-dropdown">
+            <a href="javascript:void(0)" class="nav-link dropdown-toggle">
+              <span>Portals</span>
+              <span data-icon="chevronDown"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="client-dashboard.html">Client Portal</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="quote.html" class="btn btn-primary btn-glow">Get a Quote</a>
+      </div>
+
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+        <span data-icon="menu"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="section" style="padding-top: 9rem; padding-bottom: 2.5rem;">
+    <div class="container">
+      <div class="section-header text-left">
+        <div class="badge badge-indigo">Transparent Scoping</div>
+        <h1 style="margin-top: 0.75rem;">Interactive Project Cost Estimator</h1>
+        <p class="section-subtitle">
+          Select your target platform, system capabilities, design tier, and delivery speed to generate a realistic price and timeline estimation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Scope & Quote Calculator -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <form id="quote-calc-form">
+        <div class="grid-2" style="grid-template-columns: 1.25fr 0.75fr; align-items: flex-start; gap: 3rem;">
+          
+          <!-- Left: Scope Configurator -->
+          <div>
+            <!-- Step 1: Platform Selection -->
+            <div class="calc-card" style="margin-bottom: 2rem;">
+              <div class="calc-step-title">
+                <span class="badge" style="padding:0.2rem 0.5rem;">1</span> Target Application Platform
+              </div>
+              <div class="calc-options-grid">
+                <label class="calc-option-card selected">
+                  <input type="radio" name="platform" value="web" checked>
+                  <div style="font-size:1.5rem; margin-bottom:0.4rem;">🌐</div>
+                  <strong style="color:var(--text-main); font-size:0.95rem;">Web Application</strong>
+                  <div style="font-size:0.75rem; color:var(--text-muted); margin-top:0.2rem;">SPA / PWA / Portal</div>
+                </label>
+                <label class="calc-option-card">
+                  <input type="radio" name="platform" value="mobile">
+                  <div style="font-size:1.5rem; margin-bottom:0.4rem;">📱</div>
+                  <strong style="color:var(--text-main); font-size:0.95rem;">Mobile Application</strong>
+                  <div style="font-size:0.75rem; color:var(--text-muted); margin-top:0.2rem;">iOS &amp; Android (Flutter)</div>
+                </label>
+                <label class="calc-option-card">
+                  <input type="radio" name="platform" value="cross">
+                  <div style="font-size:1.5rem; margin-bottom:0.4rem;">⚡</div>
+                  <strong style="color:var(--text-main); font-size:0.95rem;">Web + Mobile Suite</strong>
+                  <div style="font-size:0.75rem; color:var(--text-muted); margin-top:0.2rem;">Synchronized Backend</div>
+                </label>
+                <label class="calc-option-card">
+                  <input type="radio" name="platform" value="saas">
+                  <div style="font-size:1.5rem; margin-bottom:0.4rem;">☁️</div>
+                  <strong style="color:var(--text-main); font-size:0.95rem;">SaaS Cloud Product</strong>
+                  <div style="font-size:0.75rem; color:var(--text-muted); margin-top:0.2rem;">Multi-tenant Architecture</div>
+                </label>
+                <label class="calc-option-card">
+                  <input type="radio" name="platform" value="enterprise">
+                  <div style="font-size:1.5rem; margin-bottom:0.4rem;">🏢</div>
+                  <strong style="color:var(--text-main); font-size:0.95rem;">Enterprise BMS / ERP</strong>
+                  <div style="font-size:0.75rem; color:var(--text-muted); margin-top:0.2rem;">Custom Business Engine</div>
+                </label>
+              </div>
+
+              <!-- Step 2: System Features & Modules -->
+              <div class="calc-step-title" style="margin-top: 2rem;">
+                <span class="badge" style="padding:0.2rem 0.5rem;">2</span> Core Architectural Features
+              </div>
+              <div class="calc-options-grid">
+                <label class="calc-option-card">
+                  <input type="checkbox" name="features" value="auth">
+                  <strong style="color:var(--text-main); font-size:0.9rem;">User Roles &amp; RBAC</strong>
+                  <div style="font-size:0.75rem; color:var(--text-muted); margin-top:0.2rem;">OAuth2, 2FA, Permissions</div>
+                </label>
+                <label class="calc-option-card">
+                  <input type="checkbox" name="features" value="payment">
+                  <strong style="color:var(--text-main); font-size:0.9rem;">Payment &amp; Billing</strong>
+                  <div style="font-size:0.75rem; color:var(--text-muted); margin-top:0.2rem;">Stripe, Invoicing, Tax</div>
+                </label>
+                <label class="calc-option-card">
+                  <input type="checkbox" name="features" value="ai">
+                  <strong style="color:var(--text-main); font-size:0.9rem;">AI &amp; Neural Models</strong>
+                  <div style="font-size:0.75rem; color:var(--text-muted); margin-top:0.2rem;">LLMs, Embeddings, OCR</div>
+                </label>
+                <label class="calc-option-card">
+                  <input type="checkbox" name="features" value="chat">
+                  <strong style="color:var(--text-main); font-size:0.9rem;">Real-Time Messaging</strong>
+                  <div style="font-size:0.75rem; color:var(--text-muted); margin-top:0.2rem;">WebSockets, Live alerts</div>
+                </label>
+                <label class="calc-option-card">
+                  <input type="checkbox" name="features" value="analytics">
+                  <strong style="color:var(--text-main); font-size:0.9rem;">Analytics Dashboard</strong>
+                  <div style="font-size:0.75rem; color:var(--text-muted); margin-top:0.2rem;">Real-time SVG charts</div>
+                </label>
+                <label class="calc-option-card">
+                  <input type="checkbox" name="features" value="bms">
+                  <strong style="color:var(--text-main); font-size:0.9rem;">Inventory / ERP Hub</strong>
+                  <div style="font-size:0.75rem; color:var(--text-muted); margin-top:0.2rem;">Warehouse &amp; supply telemetry</div>
+                </label>
+              </div>
+
+              <!-- Step 3: Design Tier -->
+              <div class="calc-step-title" style="margin-top: 2rem;">
+                <span class="badge" style="padding:0.2rem 0.5rem;">3</span> UI/UX Design Sophistication
+              </div>
+              <div class="calc-options-grid">
+                <label class="calc-option-card selected">
+                  <input type="radio" name="design" value="clean" checked>
+                  <strong style="color:var(--text-main); font-size:0.9rem;">Standard Clean UI</strong>
+                  <div style="font-size:0.75rem; color:var(--text-muted); margin-top:0.2rem;">Modern component library</div>
+                </label>
+                <label class="calc-option-card">
+                  <input type="radio" name="design" value="custom">
+                  <strong style="color:var(--text-main); font-size:0.9rem;">Bespoke Custom UI/UX</strong>
+                  <div style="font-size:0.75rem; color:var(--text-muted); margin-top:0.2rem;">Figma research &amp; token system</div>
+                </label>
+                <label class="calc-option-card">
+                  <input type="radio" name="design" value="premium3d">
+                  <strong style="color:var(--text-main); font-size:0.9rem;">Futuristic Micro-Interactive</strong>
+                  <div style="font-size:0.75rem; color:var(--text-muted); margin-top:0.2rem;">Custom 3D / canvas motion</div>
+                </label>
+              </div>
+
+              <!-- Step 4: Urgency Timeline -->
+              <div class="calc-step-title" style="margin-top: 2rem;">
+                <span class="badge" style="padding:0.2rem 0.5rem;">4</span> Delivery Timeline
+              </div>
+              <div class="calc-options-grid">
+                <label class="calc-option-card selected">
+                  <input type="radio" name="urgency" value="standard" checked>
+                  <strong style="color:var(--text-main); font-size:0.9rem;">Standard Rhythm</strong>
+                  <div style="font-size:0.75rem; color:var(--text-muted); margin-top:0.2rem;">Regular agile sprint cycle</div>
+                </label>
+                <label class="calc-option-card">
+                  <input type="radio" name="urgency" value="accelerated">
+                  <strong style="color:var(--text-main); font-size:0.9rem;">Accelerated Track (+25%)</strong>
+                  <div style="font-size:0.75rem; color:var(--text-muted); margin-top:0.2rem;">Dedicated dual squads</div>
+                </label>
+                <label class="calc-option-card">
+                  <input type="radio" name="urgency" value="rush">
+                  <strong style="color:var(--text-main); font-size:0.9rem;">Critical Rush (+50%)</strong>
+                  <div style="font-size:0.75rem; color:var(--text-muted); margin-top:0.2rem;">Maximum velocity allocation</div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Client Contact Submission Form -->
+            <div class="calc-card">
+              <h3 style="margin-bottom: 0.5rem;">Submit Scope For Official Proposal</h3>
+              <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">
+                Our technical architects review every submission within 24 hours. No sales spam—only structured architectural consultation.
+              </p>
+
+              <div class="grid-2">
+                <div class="form-group">
+                  <label class="form-label" for="quote-name">Full Name *</label>
+                  <input type="text" id="quote-name" required class="form-control" placeholder="e.g. Elena Rostova">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="quote-email">Work Email *</label>
+                  <input type="email" id="quote-email" required class="form-control" placeholder="name@company.com">
+                </div>
+              </div>
+
+              <div class="grid-2">
+                <div class="form-group">
+                  <label class="form-label" for="quote-phone">Phone Number</label>
+                  <input type="tel" id="quote-phone" class="form-control" placeholder="+1 (555) 000-0000">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="quote-company">Company / Organization</label>
+                  <input type="text" id="quote-company" class="form-control" placeholder="e.g. Apex BioTech Corp">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="quote-ref">Reference or Existing System URL (Optional)</label>
+                <input type="url" id="quote-ref" class="form-control" placeholder="https://example.com or Figma link">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="quote-desc">Project Description &amp; Specific Constraints</label>
+                <textarea id="quote-desc" class="form-control" placeholder="Share your key operational goals, existing tech stack, or user volume expectations..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg btn-glow" style="width: 100%;">
+                Submit Scope &amp; Lock Estimate <span data-icon="arrowRight"></span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right: Live Price Sticky Card -->
+          <div>
+            <div class="calc-price-sticky">
+              <div class="badge badge-emerald" style="margin-bottom: 0.75rem;">Real-Time Calculation</div>
+              <div style="font-size: 0.9rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">
+                Estimated Investment
+              </div>
+              <div class="calc-price-display" id="calc-price">$3,500</div>
+              <div id="calc-timeline" style="color: var(--primary); font-family: var(--font-mono); font-size: 1.1rem; margin-bottom: 1.5rem;">
+                ~4 Weeks Delivery
+              </div>
+
+              <div style="text-align: left; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle); font-size: 0.85rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 0.75rem;">
+                <div style="display: flex; gap: 0.5rem;">
+                  <span data-icon="check" style="color: var(--success);"></span>
+                  <span>100% IP &amp; Source Code Ownership</span>
+                </div>
+                <div style="display: flex; gap: 0.5rem;">
+                  <span data-icon="check" style="color: var(--success);"></span>
+                  <span>Dedicated Senior Engineer Lead</span>
+                </div>
+                <div style="display: flex; gap: 0.5rem;">
+                  <span data-icon="check" style="color: var(--success);"></span>
+                  <span>CI/CD Pipeline &amp; Automated Testing</span>
+                </div>
+                <div style="display: flex; gap: 0.5rem;">
+                  <span data-icon="check" style="color: var(--success);"></span>
+                  <span>30 Days Post-Launch Warranty SLA</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1rem;">
+            <img src="9600f248-9e25-4836-9e12-b158c3783639.png" alt="NEXVORA Logo" class="brand-logo-img">
+            <span>NEXVORA<span class="highlight">.TECH</span></span>
+          </a>
+          <p style="font-size: 0.9rem; line-height: 1.7; margin-bottom: 1.5rem;">
+            NEXVORA TECHNOLOGIES is an enterprise software engineering company delivering bespoke web systems, SaaS platforms, cross-platform mobile apps, and digital infrastructure.
+          </p>
+          <div class="social-links">
+            <a href="https://github.com/Arifkhan1298" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub - Arifkhan1298" data-icon="github"></a>
+            <a href="https://wa.me/923138983870" target="_blank" rel="noopener noreferrer" class="social-link" title="WhatsApp - 03138983870" data-icon="whatsapp"></a>
+            <a href="mailto:arifkhankkhan002@gmail.com" class="social-link" title="Email Arifullah" data-icon="email"></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Company</a></li>
+            <li><a href="services.html">All Services</a></li>
+            <li><a href="solutions.html">Industry Solutions</a></li>
+            <li><a href="projects.html">Portfolio &amp; Work</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="team.html">Our Leadership</a></li>
+            <li><a href="careers.html">Careers (Hiring)</a></li>
+            <li><a href="blog.html">Engineering Blog</a></li>
+            <li><a href="quote.html">Get a Quote</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Enterprise</h4>
+          <ul class="footer-links">
+            <li><a href="client-dashboard.html">Client Portal</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p style="font-size: 0.85rem; margin-bottom: 1rem;">Stay updated with our architectural whitepapers and tech insights.</p>
+          <form onsubmit="event.preventDefault(); window.Nexvora.showToast('Subscribed to NEXVORA Tech Insights!', 'success'); this.reset();" style="display:flex; flex-direction:column; gap:0.6rem;">
+            <input type="email" required placeholder="Enter work email..." class="form-control" style="font-size:0.85rem; padding:0.6rem 0.8rem;">
+            <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 NEXVORA TECHNOLOGIES. All rights reserved. Enterprise-grade software engineering.</div>
+        <div style="display:flex; gap:1.5rem;">
+          <a href="privacy.html" style="color:var(--text-dim);">Privacy</a>
+          <a href="terms.html" style="color:var(--text-dim);">Terms</a>
+          <a href="contact.html" style="color:var(--text-dim);">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

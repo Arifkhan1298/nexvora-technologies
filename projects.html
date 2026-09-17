@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NEXVORA TECHNOLOGIES Portfolio — Case studies of enterprise software, cloud platforms, mobile apps, and systems.">
+  <title>Projects &amp; Case Studies — NEXVORA TECHNOLOGIES</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+  <!-- Top Sticky Header -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="NEXVORA TECHNOLOGIES Home">
+        <img src="9600f248-9e25-4836-9e12-b158c3783639.png" alt="NEXVORA Logo" class="brand-logo-img">
+        <span>NEXVORA<span class="highlight">.TECH</span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="solutions.html" class="nav-link">Solutions</a></li>
+          <li><a href="projects.html" class="nav-link active">Projects</a></li>
+          <li><a href="team.html" class="nav-link">Team</a></li>
+          <li><a href="careers.html" class="nav-link">Careers</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item-dropdown">
+            <a href="javascript:void(0)" class="nav-link dropdown-toggle">
+              <span>Portals</span>
+              <span data-icon="chevronDown"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="client-dashboard.html">Client Portal</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="quote.html" class="btn btn-primary btn-glow">Get a Quote</a>
+      </div>
+
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+        <span data-icon="menu"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="section" style="padding-top: 9rem; padding-bottom: 3.5rem;">
+    <div class="container">
+      <div class="section-header text-left">
+        <div class="badge badge-indigo">Engineered Systems</div>
+        <h1 style="margin-top: 0.75rem;">Selected Case Studies &amp; Projects</h1>
+        <p class="section-subtitle">
+          Explore real-world software platforms, microservices, mobile apps, and business systems deployed across diverse sectors.
+        </p>
+      </div>
+
+      <!-- Real-Time Search Bar -->
+      <div class="search-wrapper">
+        <span class="search-icon" data-icon="search"></span>
+        <input type="text" id="project-search" class="search-input" placeholder="Search by name, technology (e.g. React, Flutter, Go), or keyword...">
+      </div>
+
+      <!-- Category Filter Bar -->
+      <div class="filter-bar">
+        <button class="filter-btn project-filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn project-filter-btn" data-filter="web">Web Apps</button>
+        <button class="filter-btn project-filter-btn" data-filter="mobile">Mobile</button>
+        <button class="filter-btn project-filter-btn" data-filter="saas">SaaS</button>
+        <button class="filter-btn project-filter-btn" data-filter="bms">Business Systems</button>
+        <button class="filter-btn project-filter-btn" data-filter="ecommerce">E-Commerce</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Grid -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="grid-3" id="projects-container">
+
+        <!-- Project 1: FinTech Core Gateway -->
+        <div class="project-card" data-category="saas web" data-tech="Go Redis Docker PostgreSQL">
+          <div class="project-thumb">
+            <svg class="preview-graphic" viewBox="0 0 200 120" fill="none">
+              <rect width="200" height="120" rx="6" fill="#F4EFE6"/>
+              <circle cx="100" cy="60" r="32" stroke="#D97D6B" stroke-width="2" stroke-dasharray="4 4"/>
+              <circle cx="100" cy="60" r="14" fill="#4A1525"/>
+              <path d="M40 30 L80 50 M160 30 L120 50 M100 90 L100 110" stroke="#C5A880" stroke-width="1.5"/>
+            </svg>
+            <div class="project-overlay-badge badge badge-indigo">SaaS Platform</div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">FinTech Core Gateway</h3>
+            <p class="project-desc">High-throughput microservices gateway processing 15,000 transactions per second with real-time audit ledger.</p>
+            <div class="project-footer">
+              <div class="service-tech-tags" style="border:none; padding:0;">
+                <span class="tech-tag">Go</span>
+                <span class="tech-tag">Redis</span>
+                <span class="tech-tag">Docker</span>
+              </div>
+              <a href="project-details.html?id=fintech" class="btn btn-sm btn-outline">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: HyperLogistics ERP -->
+        <div class="project-card" data-category="bms web" data-tech="Python React Fastify MQTT MySQL">
+          <div class="project-thumb">
+            <svg class="preview-graphic" viewBox="0 0 200 120" fill="none">
+              <rect width="200" height="120" rx="6" fill="#F4EFE6"/>
+              <rect x="30" y="25" width="140" height="70" rx="4" stroke="#4A1525" stroke-width="1.5"/>
+              <line x1="30" y1="45" x2="170" y2="45" stroke="#D8C4AC"/>
+              <rect x="40" y="55" width="30" height="25" rx="2" fill="rgba(217,125,107,0.25)"/>
+              <rect x="80" y="55" width="30" height="25" rx="2" fill="rgba(74,21,37,0.15)"/>
+              <rect x="120" y="55" width="30" height="25" rx="2" fill="rgba(197,168,128,0.3)"/>
+            </svg>
+            <div class="project-overlay-badge badge badge-emerald">Business Systems</div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">HyperLogistics ERP Fleet</h3>
+            <p class="project-desc">Cloud-native warehouse dispatch and IoT fleet telemetry system managing 2,400+ vehicles with zero dispatch delays.</p>
+            <div class="project-footer">
+              <div class="service-tech-tags" style="border:none; padding:0;">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">MQTT</span>
+              </div>
+              <a href="project-details.html?id=logistics" class="btn btn-sm btn-outline">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Aura Telemedicine App -->
+        <div class="project-card" data-category="mobile" data-tech="Flutter WebRTC Firebase Kotlin">
+          <div class="project-thumb">
+            <svg class="preview-graphic" viewBox="0 0 200 120" fill="none">
+              <rect width="200" height="120" rx="6" fill="#F4EFE6"/>
+              <rect x="75" y="15" width="50" height="90" rx="8" stroke="#4A1525" stroke-width="2"/>
+              <circle cx="100" cy="95" r="4" fill="#D97D6B"/>
+              <rect x="82" y="28" width="36" height="55" rx="3" fill="#FAF7F2"/>
+              <path d="M85 55 L95 65 L115 45" stroke="#2A7B58" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <div class="project-overlay-badge badge badge-purple">Mobile App</div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Aura Health Telemedicine</h3>
+            <p class="project-desc">Encrypted video consultation and e-prescription mobile app compliant with HIPAA and GDPR data privacy standards.</p>
+            <div class="project-footer">
+              <div class="service-tech-tags" style="border:none; padding:0;">
+                <span class="tech-tag">Flutter</span>
+                <span class="tech-tag">WebRTC</span>
+                <span class="tech-tag">Firebase</span>
+              </div>
+              <a href="project-details.html?id=aura" class="btn btn-sm btn-outline">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: OmniCommerce Engine -->
+        <div class="project-card" data-category="ecommerce web" data-tech="TypeScript Next.js Stripe GraphQL">
+          <div class="project-thumb">
+            <svg class="preview-graphic" viewBox="0 0 200 120" fill="none">
+              <rect width="200" height="120" rx="6" fill="#F4EFE6"/>
+              <circle cx="70" cy="90" r="10" stroke="#4A1525" stroke-width="2"/>
+              <circle cx="130" cy="90" r="10" stroke="#4A1525" stroke-width="2"/>
+              <path d="M40 30 H65 L80 75 H145 L160 45 H75" stroke="#D97D6B" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <div class="project-overlay-badge badge">E-Commerce</div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">OmniCommerce Storefront</h3>
+            <p class="project-desc">Headless multi-brand retail platform with sub-50ms catalog lookups, automated currency translation, and Stripe checkouts.</p>
+            <div class="project-footer">
+              <div class="service-tech-tags" style="border:none; padding:0;">
+                <span class="tech-tag">Next.js</span>
+                <span class="tech-tag">Stripe</span>
+                <span class="tech-tag">GraphQL</span>
+              </div>
+              <a href="project-details.html?id=ecommerce" class="btn btn-sm btn-outline">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: CloudPulse Observability -->
+        <div class="project-card" data-category="saas web" data-tech="React Rust ClickHouse WebSockets">
+          <div class="project-thumb">
+            <svg class="preview-graphic" viewBox="0 0 200 120" fill="none">
+              <rect width="200" height="120" rx="6" fill="#F4EFE6"/>
+              <polyline points="30,80 60,60 90,75 120,40 150,55 180,30" stroke="#2A7B58" stroke-width="2.5" fill="none"/>
+              <circle cx="180" cy="30" r="4" fill="#D97D6B"/>
+            </svg>
+            <div class="project-overlay-badge badge badge-emerald">SaaS Tooling</div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">CloudPulse Telemetry Hub</h3>
+            <p class="project-desc">Distributed metrics ingestion engine crunching 200,000 server event logs per minute with sub-second alert triggers.</p>
+            <div class="project-footer">
+              <div class="service-tech-tags" style="border:none; padding:0;">
+                <span class="tech-tag">Rust</span>
+                <span class="tech-tag">ClickHouse</span>
+                <span class="tech-tag">React</span>
+              </div>
+              <a href="project-details.html?id=telemetry" class="btn btn-sm btn-outline">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6: MedPortal Clinical EHR -->
+        <div class="project-card" data-category="bms web" data-tech="PostgreSQL Node.js Angular Docker">
+          <div class="project-thumb">
+            <svg class="preview-graphic" viewBox="0 0 200 120" fill="none">
+              <rect width="200" height="120" rx="6" fill="#F4EFE6"/>
+              <rect x="40" y="25" width="120" height="70" rx="4" stroke="#4A1525" stroke-width="1.5"/>
+              <line x1="100" y1="40" x2="100" y2="80" stroke="#4A1525" stroke-width="3"/>
+              <line x1="80" y1="60" x2="120" y2="60" stroke="#4A1525" stroke-width="3"/>
+            </svg>
+            <div class="project-overlay-badge badge badge-purple">Business Systems</div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">MedPortal Clinical Records</h3>
+            <p class="project-desc">Hospital departmental management software coordinating inpatient beds, pharmacy dispenses, and lab scheduling.</p>
+            <div class="project-footer">
+              <div class="service-tech-tags" style="border:none; padding:0;">
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">FHIR</span>
+              </div>
+              <a href="project-details.html?id=medportal" class="btn btn-sm btn-outline">View Details</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1rem;">
+            <img src="9600f248-9e25-4836-9e12-b158c3783639.png" alt="NEXVORA Logo" class="brand-logo-img">
+            <span>NEXVORA<span class="highlight">.TECH</span></span>
+          </a>
+          <p style="font-size: 0.9rem; line-height: 1.7; margin-bottom: 1.5rem;">
+            NEXVORA TECHNOLOGIES is an enterprise software engineering company delivering bespoke web systems, SaaS platforms, cross-platform mobile apps, and digital infrastructure.
+          </p>
+          <div class="social-links">
+            <a href="https://github.com/Arifkhan1298" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub - Arifkhan1298" data-icon="github"></a>
+            <a href="https://wa.me/923138983870" target="_blank" rel="noopener noreferrer" class="social-link" title="WhatsApp - 03138983870" data-icon="whatsapp"></a>
+            <a href="mailto:arifkhankkhan002@gmail.com" class="social-link" title="Email Arifullah" data-icon="email"></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Company</a></li>
+            <li><a href="services.html">All Services</a></li>
+            <li><a href="solutions.html">Industry Solutions</a></li>
+            <li><a href="projects.html">Portfolio &amp; Work</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="team.html">Our Leadership</a></li>
+            <li><a href="careers.html">Careers (Hiring)</a></li>
+            <li><a href="blog.html">Engineering Blog</a></li>
+            <li><a href="quote.html">Get a Quote</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Enterprise</h4>
+          <ul class="footer-links">
+            <li><a href="client-dashboard.html">Client Portal</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p style="font-size: 0.85rem; margin-bottom: 1rem;">Stay updated with our architectural whitepapers and tech insights.</p>
+          <form onsubmit="event.preventDefault(); window.Nexvora.showToast('Subscribed to NEXVORA Tech Insights!', 'success'); this.reset();" style="display:flex; flex-direction:column; gap:0.6rem;">
+            <input type="email" required placeholder="Enter work email..." class="form-control" style="font-size:0.85rem; padding:0.6rem 0.8rem;">
+            <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 NEXVORA TECHNOLOGIES. All rights reserved. Enterprise-grade software engineering.</div>
+        <div style="display:flex; gap:1.5rem;">
+          <a href="privacy.html" style="color:var(--text-dim);">Privacy</a>
+          <a href="terms.html" style="color:var(--text-dim);">Terms</a>
+          <a href="contact.html" style="color:var(--text-dim);">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NEXVORA TECHNOLOGIES Admin Command Center &amp; CRM Lead Management.">
+  <title>Admin CRM Command Center — NEXVORA TECHNOLOGIES</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+  <!-- Top Sticky Header -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="NEXVORA TECHNOLOGIES Home">
+        <img src="9600f248-9e25-4836-9e12-b158c3783639.png" alt="NEXVORA Logo" class="brand-logo-img">
+        <span>NEXVORA<span class="highlight">.ADMIN</span></span>
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link">Main Website</a></li>
+          <li><a href="client-dashboard.html" class="nav-link">Client Portal</a></li>
+          <li><a href="admin-dashboard.html" class="nav-link active">Admin CRM</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="open-add-lead-btn" class="btn btn-primary btn-sm btn-glow">+ Add New Lead</button>
+      </div>
+
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+        <span data-icon="menu"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Admin Dashboard Layout -->
+  <div class="dashboard-layout">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="dash-sidebar">
+      <div style="padding: 0 0.5rem 1rem 0.5rem; border-bottom: 1px solid var(--border-subtle); margin-bottom: 0.75rem;">
+        <div style="font-size: 0.75rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em;">Admin Command</div>
+        <strong style="color: var(--primary); font-size: 1rem;">HQ Operations Control</strong>
+      </div>
+      <a href="#kpis" class="dash-nav-item active"><span data-icon="layers"></span> Executive KPI Hub</a>
+      <a href="#leads-section" class="dash-nav-item"><span data-icon="users"></span> Lead Management CRM</a>
+      <a href="#charts-section" class="dash-nav-item"><span data-icon="cpu"></span> Revenue &amp; Analytics</a>
+      <a href="#applications-section" class="dash-nav-item"><span data-icon="briefcase"></span> Job Applications</a>
+      <a href="javascript:void(0)" onclick="window.Nexvora.showToast('Demo Database Reset to Defaults', 'info'); localStorage.clear(); location.reload();" class="dash-nav-item" style="color:#ef4444;">
+        <span>&#8634;</span> Reset Demo Data
+      </a>
+      <div style="margin-top: auto; padding: 1rem 0.5rem; border-top: 1px solid var(--border-subtle);">
+        <a href="client-dashboard.html" class="btn btn-sm btn-outline" style="width:100%;">View Client Portal</a>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="dash-content">
+      
+      <!-- Top Status Notice -->
+      <div style="background: rgba(74, 21, 37, 0.04); border: 1px solid rgba(74, 21, 37, 0.15); border-radius: var(--radius-md); padding: 0.85rem 1.25rem; margin-bottom: 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+        <div style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem;">
+          <span data-icon="shield" style="color: var(--secondary);"></span>
+          <span><strong>Enterprise CRM &amp; Pipeline Engine:</strong> Real-time LocalStorage state persistence &amp; REST API synchronizer.</span>
+        </div>
+        <span class="badge badge-emerald">Cluster Status: 100% Uptime</span>
+      </div>
+
+      <!-- KPI Overview -->
+      <div class="kpi-grid" id="kpis">
+        <div class="kpi-card">
+          <div style="font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase;">Active Pipeline Leads</div>
+          <div class="kpi-val" id="kpi-total-leads" style="color: var(--primary);">5</div>
+          <div style="font-size: 0.8rem; color: var(--success);">+2 this week from Quote Estimator</div>
+        </div>
+
+        <div class="kpi-card">
+          <div style="font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase;">Active Deployments</div>
+          <div class="kpi-val">12</div>
+          <div style="font-size: 0.8rem; color: var(--text-muted);">SaaS, BMS &amp; Mobile Squads</div>
+        </div>
+
+        <div class="kpi-card">
+          <div style="font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase;">Pipeline Contract Value</div>
+          <div class="kpi-val" style="color: var(--success);">$135,500</div>
+          <div style="font-size: 0.8rem; color: var(--text-muted);">Across 5 active prospects</div>
+        </div>
+
+        <div class="kpi-card">
+          <div style="font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase;">Historical Deployments</div>
+          <div class="kpi-val" style="color: var(--secondary);">180+</div>
+          <div style="font-size: 0.8rem; color: var(--text-muted);">Since foundation</div>
+        </div>
+      </div>
+
+      <!-- Pure SVG Real-Time Charts Section -->
+      <div class="grid-2" id="charts-section" style="margin-bottom: 2.5rem; align-items: flex-start;">
+        
+        <!-- Revenue Growth Line Chart (SVG) -->
+        <div class="card" style="padding: 1.75rem;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.25rem;">
+            <div>
+              <h3 style="font-size: 1.15rem;">Revenue Trajectory (USD)</h3>
+              <div style="font-size: 0.8rem; color: var(--text-dim);">Trailing 6 Months Contract Invoicing</div>
+            </div>
+            <span class="badge badge-emerald">+38% YoY</span>
+          </div>
+          <svg viewBox="0 0 400 160" fill="none" style="width: 100%;">
+            <!-- Grid Lines -->
+            <line x1="20" y1="30" x2="380" y2="30" stroke="var(--border-color)" stroke-dasharray="2 2"/>
+            <line x1="20" y1="70" x2="380" y2="70" stroke="var(--border-color)" stroke-dasharray="2 2"/>
+            <line x1="20" y1="110" x2="380" y2="110" stroke="var(--border-color)" stroke-dasharray="2 2"/>
+            <!-- Area Gradient Fill -->
+            <defs>
+              <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#4A1525" stop-opacity="0.25"/>
+                <stop offset="100%" stop-color="#D97D6B" stop-opacity="0.0"/>
+              </linearGradient>
+            </defs>
+            <polygon points="30,130 90,110 150,95 210,85 270,55 350,25 350,140 30,140" fill="url(#chartGrad)"/>
+            <!-- Line Path -->
+            <polyline points="30,130 90,110 150,95 210,85 270,55 350,25" stroke="#4A1525" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <!-- Points -->
+            <circle cx="30" cy="130" r="4" fill="#FAF7F2" stroke="#4A1525" stroke-width="2"/>
+            <circle cx="90" cy="110" r="4" fill="#FAF7F2" stroke="#4A1525" stroke-width="2"/>
+            <circle cx="150" cy="95" r="4" fill="#FAF7F2" stroke="#4A1525" stroke-width="2"/>
+            <circle cx="210" cy="85" r="4" fill="#FAF7F2" stroke="#4A1525" stroke-width="2"/>
+            <circle cx="270" cy="55" r="4" fill="#FAF7F2" stroke="#4A1525" stroke-width="2"/>
+            <circle cx="350" cy="25" r="5" fill="#D97D6B" stroke="#4A1525" stroke-width="2"/>
+            <!-- Month Labels -->
+            <text x="30" y="155" fill="var(--text-muted)" font-size="10" font-family="monospace" text-anchor="middle">APR</text>
+            <text x="90" y="155" fill="var(--text-muted)" font-size="10" font-family="monospace" text-anchor="middle">MAY</text>
+            <text x="150" y="155" fill="var(--text-muted)" font-size="10" font-family="monospace" text-anchor="middle">JUN</text>
+            <text x="210" y="155" fill="var(--text-muted)" font-size="10" font-family="monospace" text-anchor="middle">JUL</text>
+            <text x="270" y="155" fill="var(--text-muted)" font-size="10" font-family="monospace" text-anchor="middle">AUG</text>
+            <text x="350" y="155" fill="#4A1525" font-size="10" font-weight="bold" font-family="monospace" text-anchor="middle">SEPT</text>
+          </svg>
+        </div>
+
+        <!-- Service Distribution Donut Chart (SVG) -->
+        <div class="card" style="padding: 1.75rem;">
+          <h3 style="font-size: 1.15rem; margin-bottom: 0.25rem;">Service Workload Allocation</h3>
+          <div style="font-size: 0.8rem; color: var(--text-dim); margin-bottom: 1.25rem;">Current Active Engineering Hours</div>
+          <div style="display: flex; align-items: center; justify-content: space-around; flex-wrap: wrap; gap: 1.5rem;">
+            <svg viewBox="0 0 120 120" width="120" height="120">
+              <circle cx="60" cy="60" r="45" stroke="#EFE8DC" stroke-width="16" fill="none"/>
+              <!-- Segment 1: SaaS (40%) -->
+              <circle cx="60" cy="60" r="45" stroke="#4A1525" stroke-width="16" fill="none"
+                      stroke-dasharray="113 283" stroke-dashoffset="0"/>
+              <!-- Segment 2: Mobile (30%) -->
+              <circle cx="60" cy="60" r="45" stroke="#D97D6B" stroke-width="16" fill="none"
+                      stroke-dasharray="85 283" stroke-dashoffset="-113"/>
+              <!-- Segment 3: BMS/ERP (20%) -->
+              <circle cx="60" cy="60" r="45" stroke="#C5A880" stroke-width="16" fill="none"
+                      stroke-dasharray="56 283" stroke-dashoffset="-198"/>
+              <!-- Segment 4: Web (10%) -->
+              <circle cx="60" cy="60" r="45" stroke="#2E0E1B" stroke-width="16" fill="none"
+                      stroke-dasharray="29 283" stroke-dashoffset="-254"/>
+            </svg>
+            <div style="font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.5rem;">
+              <div><span style="display:inline-block; width:10px; height:10px; border-radius:2px; background:#4A1525; margin-right:6px;"></span> 40% SaaS Cloud Platforms</div>
+              <div><span style="display:inline-block; width:10px; height:10px; border-radius:2px; background:#D97D6B; margin-right:6px;"></span> 30% Mobile Applications</div>
+              <div><span style="display:inline-block; width:10px; height:10px; border-radius:2px; background:#C5A880; margin-right:6px;"></span> 20% Business Systems (BMS/ERP)</div>
+              <div><span style="display:inline-block; width:10px; height:10px; border-radius:2px; background:#2E0E1B; margin-right:6px;"></span> 10% Custom Web Portals</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Lead Management CRM Section -->
+      <div class="card" id="leads-section" style="margin-bottom: 2.5rem; padding: 2rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <h2>Lead Pipeline CRM</h2>
+            <p style="font-size: 0.9rem;">Filter, update status, and manage incoming client project opportunities.</p>
+          </div>
+          <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+            <!-- Status Filter -->
+            <select id="lead-status-filter" class="form-control" style="width: auto; padding: 0.5rem 1.8rem 0.5rem 0.8rem; font-size: 0.85rem;">
+              <option value="all">All Statuses</option>
+              <option value="New">New</option>
+              <option value="Contacted">Contacted</option>
+              <option value="Proposal">Proposal</option>
+              <option value="Negotiation">Negotiation</option>
+              <option value="Won">Won</option>
+              <option value="Lost">Lost</option>
+            </select>
+            <!-- Search Input -->
+            <input type="text" id="lead-search-input" class="form-control" placeholder="Search leads..." style="width: 200px; padding: 0.5rem 0.8rem; font-size: 0.85rem;">
+            <!-- Export CSV -->
+            <button class="btn btn-sm btn-outline" onclick="window.Nexvora.showToast('Exporting Leads to CSV format...', 'info');">
+              Export CSV
+            </button>
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Client Name &amp; Contact</th>
+                <th>Company</th>
+                <th>Requested Service</th>
+                <th>Estimated Budget</th>
+                <th>Pipeline Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="admin-leads-tbody">
+              <!-- Rendered dynamically by script.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Job Applications Review Section -->
+      <div class="card" id="applications-section" style="padding: 2rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+          <div>
+            <h3>Job Candidate Submissions</h3>
+            <p style="font-size: 0.9rem;">Talent applications submitted via the Careers portal.</p>
+          </div>
+          <span class="badge badge-indigo">Automated Screening Active</span>
+        </div>
+
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>App ID</th>
+                <th>Candidate Name</th>
+                <th>Position Applied</th>
+                <th>Experience</th>
+                <th>Applied Date</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>APP-9912</strong></td>
+                <td><strong>Tariq Mahmood</strong><div style="font-size:0.75rem; color:var(--text-dim);">tariq@devmail.com &bull; +1 (555) 928-1120</div></td>
+                <td>Senior Distributed Systems Engineer (Go / Rust)</td>
+                <td>5+ Years</td>
+                <td>2026-09-15</td>
+                <td><span class="badge badge-emerald">Shortlisted</span></td>
+                <td><button class="btn btn-sm btn-outline" onclick="window.Nexvora.showToast('Opening candidate resume and portfolio review...', 'info');">Review</button></td>
+              </tr>
+              <tr>
+                <td><strong>APP-9914</strong></td>
+                <td><strong>Maya Lin</strong><div style="font-size:0.75rem; color:var(--text-dim);">maya.lin@uxstudio.design</div></td>
+                <td>Lead Frontend Engineer (React &amp; TypeScript)</td>
+                <td>4+ Years</td>
+                <td>2026-09-14</td>
+                <td><span class="badge badge-indigo">Review Pending</span></td>
+                <td><button class="btn btn-sm btn-outline" onclick="window.Nexvora.showToast('Opening candidate resume and portfolio review...', 'info');">Review</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Add New Lead Modal Dialog -->
+  <div class="modal-backdrop" id="add-lead-modal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3>Add New Prospect / Lead</h3>
+        <button class="modal-close-btn" id="close-add-lead-btn">
+          <span data-icon="close"></span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="add-lead-form">
+          <div class="grid-2">
+            <div class="form-group">
+              <label class="form-label" for="new-lead-name">Client Name *</label>
+              <input type="text" id="new-lead-name" required class="form-control" placeholder="e.g. Rachel Adams">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="new-lead-company">Company</label>
+              <input type="text" id="new-lead-company" class="form-control" placeholder="e.g. Apex Global">
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <div class="form-group">
+              <label class="form-label" for="new-lead-email">Email Address *</label>
+              <input type="email" id="new-lead-email" required class="form-control" placeholder="rachel@apex.com">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="new-lead-service">Service</label>
+              <select id="new-lead-service" class="form-control">
+                <option value="SaaS Platform">SaaS Platform</option>
+                <option value="Mobile App">Mobile App</option>
+                <option value="Custom Software">Custom Software</option>
+                <option value="Business Systems (BMS)">Business Systems (BMS)</option>
+                <option value="Web Application">Web Application</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <div class="form-group">
+              <label class="form-label" for="new-lead-budget">Budget Estimate</label>
+              <input type="text" id="new-lead-budget" class="form-control" placeholder="$25,000">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="new-lead-status">Initial Status</label>
+              <select id="new-lead-status" class="form-control">
+                <option value="New">New</option>
+                <option value="Contacted">Contacted</option>
+                <option value="Proposal">Proposal</option>
+                <option value="Negotiation">Negotiation</option>
+                <option value="Won">Won</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="new-lead-notes">Notes &amp; Scope Summary</label>
+            <textarea id="new-lead-notes" class="form-control" placeholder="Key technical goals, timeline, or client background..."></textarea>
+          </div>
+
+          <div style="display:flex; justify-content:flex-end; gap:1rem; margin-top:1.5rem;">
+            <button type="button" class="btn btn-outline btn-sm" onclick="document.getElementById('add-lead-modal').classList.remove('open');">Cancel</button>
+            <button type="submit" class="btn btn-primary btn-sm btn-glow">Save Lead to CRM</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

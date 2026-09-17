@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Engineering blog and technical insights from NEXVORA TECHNOLOGIES architects.">
+  <title>Engineering Blog &amp; Insights — NEXVORA TECHNOLOGIES</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+  <!-- Top Sticky Header -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="NEXVORA TECHNOLOGIES Home">
+        <img src="9600f248-9e25-4836-9e12-b158c3783639.png" alt="NEXVORA Logo" class="brand-logo-img">
+        <span>NEXVORA<span class="highlight">.TECH</span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="solutions.html" class="nav-link">Solutions</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="team.html" class="nav-link">Team</a></li>
+          <li><a href="careers.html" class="nav-link">Careers</a></li>
+          <li><a href="blog.html" class="nav-link active">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item-dropdown">
+            <a href="javascript:void(0)" class="nav-link dropdown-toggle">
+              <span>Portals</span>
+              <span data-icon="chevronDown"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="client-dashboard.html">Client Portal</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="quote.html" class="btn btn-primary btn-glow">Get a Quote</a>
+      </div>
+
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+        <span data-icon="menu"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="section" style="padding-top: 9rem; padding-bottom: 3.5rem;">
+    <div class="container">
+      <div class="section-header text-left">
+        <div class="badge badge-indigo">Engineering Dispatches</div>
+        <h1 style="margin-top: 0.75rem;">Technical Whitepapers &amp; Insights</h1>
+        <p class="section-subtitle">
+          In-depth architectural analysis, distributed systems breakdowns, mobile performance benchmarking, and software engineering practices.
+        </p>
+      </div>
+
+      <!-- Real-Time Search Bar -->
+      <div class="search-wrapper">
+        <span class="search-icon" data-icon="search"></span>
+        <input type="text" id="blog-search" class="search-input" placeholder="Search articles by title, topic, or keyword...">
+      </div>
+
+      <!-- Category Filter Bar -->
+      <div class="filter-bar">
+        <button class="filter-btn blog-filter-btn active" data-filter="all">All Articles</button>
+        <button class="filter-btn blog-filter-btn" data-filter="ai">Artificial Intelligence</button>
+        <button class="filter-btn blog-filter-btn" data-filter="web">Web Engineering</button>
+        <button class="filter-btn blog-filter-btn" data-filter="mobile">Mobile Apps</button>
+        <button class="filter-btn blog-filter-btn" data-filter="cloud">Cloud &amp; DevOps</button>
+        <button class="filter-btn blog-filter-btn" data-filter="cybersecurity">Cybersecurity</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Articles Grid -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="grid-3" id="blog-grid">
+
+        <!-- Article 1: Cloud & Microservices -->
+        <div class="card blog-card" data-category="cloud" style="display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 0.75rem;">
+            <span class="badge badge-indigo">Cloud &amp; DevOps</span>
+            <span style="font-size: 0.8rem; color: var(--text-dim);">6 min read</span>
+          </div>
+          <h3 class="blog-title" style="margin-bottom: 0.75rem; font-size: 1.2rem;">
+            Eliminating Monolithic Lock Contention with Event-Driven Go Microservices
+          </h3>
+          <p class="blog-snippet" style="font-size: 0.9rem; margin-bottom: 1.5rem; flex-grow: 1;">
+            How we refactored a high-volume financial ledger from database table locks into an append-only memory journal, achieving a 12x boost in peak transaction concurrency.
+          </p>
+          <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-subtle); padding-top: 1rem; margin-top: auto;">
+            <span style="font-size: 0.8rem; color: var(--text-dim);">Sept 14, 2026</span>
+            <button class="btn btn-sm btn-outline read-article-btn" onclick="openArticleModal('Eliminating Monolithic Lock Contention with Event-Driven Go Microservices', 'Sept 14, 2026 &bull; Asad Khan, CTO', 'When scaling database-bound systems, standard relational locks create massive queue backlogs. In this technical deep-dive, we examine how append-only journals in Redis paired with asynchronous Kafka producers unlock sub-millisecond settlement times while eliminating database deadlock states.');">
+              Read Article &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- Article 2: AI & LLMs -->
+        <div class="card blog-card" data-category="ai" style="display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 0.75rem;">
+            <span class="badge badge-emerald">AI &amp; Neural Models</span>
+            <span style="font-size: 0.8rem; color: var(--text-dim);">8 min read</span>
+          </div>
+          <h3 class="blog-title" style="margin-bottom: 0.75rem; font-size: 1.2rem;">
+            Private On-Premise Vector Search Architecture for Strict Compliance
+          </h3>
+          <p class="blog-snippet" style="font-size: 0.9rem; margin-bottom: 1.5rem; flex-grow: 1;">
+            A blueprint for deploying self-hosted vector embeddings and RAG pipelines inside isolated customer VPCs without leaking sensitive enterprise data to external APIs.
+          </p>
+          <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-subtle); padding-top: 1rem; margin-top: auto;">
+            <span style="font-size: 0.8rem; color: var(--text-dim);">Sept 09, 2026</span>
+            <button class="btn btn-sm btn-outline read-article-btn" onclick="openArticleModal('Private On-Premise Vector Search Architecture for Strict Compliance', 'Sept 09, 2026 &bull; AI Squad', 'Enterprises handling HIPAA and PCI-DSS data cannot pipe confidential documents into third-party cloud LLMs. We demonstrate deploying lightweight quantised neural models with pgvector to deliver instant semantic search entirely inside your sovereign perimeter.');">
+              Read Article &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- Article 3: Web Engineering -->
+        <div class="card blog-card" data-category="web" style="display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 0.75rem;">
+            <span class="badge">Web Engineering</span>
+            <span style="font-size: 0.8rem; color: var(--text-dim);">5 min read</span>
+          </div>
+          <h3 class="blog-title" style="margin-bottom: 0.75rem; font-size: 1.2rem;">
+            Why Zero External Dependencies is the Ultimate Web Performance Strategy
+          </h3>
+          <p class="blog-snippet" style="font-size: 0.9rem; margin-bottom: 1.5rem; flex-grow: 1;">
+            Analyzing how stripping third-party CDN fonts, bloated JavaScript frameworks, and tracking pixels yields perfect 100/100 Core Web Vitals and resilient offline operation.
+          </p>
+          <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-subtle); padding-top: 1rem; margin-top: auto;">
+            <span style="font-size: 0.8rem; color: var(--text-dim);">Sept 02, 2026</span>
+            <button class="btn btn-sm btn-outline read-article-btn" onclick="openArticleModal('Why Zero External Dependencies is the Ultimate Web Performance Strategy', 'Sept 02, 2026 &bull; Elena Rostova, Frontend Lead', 'External CDNs introduce DNS lookups, TCP handshakes, and third-party outage points. By relying on native browser typography, vector inline SVGs, and efficient vanilla JavaScript, web pages render in under 80ms while operating seamlessly offline.');">
+              Read Article &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- Article 4: Mobile Apps -->
+        <div class="card blog-card" data-category="mobile" style="display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 0.75rem;">
+            <span class="badge badge-purple">Mobile Apps</span>
+            <span style="font-size: 0.8rem; color: var(--text-dim);">7 min read</span>
+          </div>
+          <h3 class="blog-title" style="margin-bottom: 0.75rem; font-size: 1.2rem;">
+            Offline-First SQLite Synchronization Patterns in Flutter Applications
+          </h3>
+          <p class="blog-snippet" style="font-size: 0.9rem; margin-bottom: 1.5rem; flex-grow: 1;">
+            Designing bidirectional optimistic state reconciliation between client-side SQLite databases and cloud PostgreSQL clusters in intermittent connectivity environments.
+          </p>
+          <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-subtle); padding-top: 1rem; margin-top: auto;">
+            <span style="font-size: 0.8rem; color: var(--text-dim);">Aug 28, 2026</span>
+            <button class="btn btn-sm btn-outline read-article-btn" onclick="openArticleModal('Offline-First SQLite Synchronization Patterns in Flutter Applications', 'Aug 28, 2026 &bull; Marcus Chen, Mobile Head', 'Mobile users in field environments require full write-read capabilities without cell coverage. We illustrate vector clock timestamps and conflict-free replicated data types (CRDTs) that merge local updates into the cloud without collisions.');">
+              Read Article &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- Article 5: Cybersecurity -->
+        <div class="card blog-card" data-category="cybersecurity" style="display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 0.75rem;">
+            <span class="badge badge-indigo">Cybersecurity</span>
+            <span style="font-size: 0.8rem; color: var(--text-dim);">6 min read</span>
+          </div>
+          <h3 class="blog-title" style="margin-bottom: 0.75rem; font-size: 1.2rem;">
+            Hardening API Gateways Against Distributed Layer-7 DDoS Attacks
+          </h3>
+          <p class="blog-snippet" style="font-size: 0.9rem; margin-bottom: 1.5rem; flex-grow: 1;">
+            Practical techniques for implementing token bucket rate-limiters in Redis, mTLS service meshes, and automated IP reputation scoring without adding request latency.
+          </p>
+          <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-subtle); padding-top: 1rem; margin-top: auto;">
+            <span style="font-size: 0.8rem; color: var(--text-dim);">Aug 19, 2026</span>
+            <button class="btn btn-sm btn-outline read-article-btn" onclick="openArticleModal('Hardening API Gateways Against Distributed Layer-7 DDoS Attacks', 'Aug 19, 2026 &bull; Alexander Wright, QA & Security Lead', 'Modern DDoS attacks mimic legitimate API traffic to exhaust backend database connections. We outline how token buckets executed in Redis Lua scripts evaluate 50,000 incoming requests per second with negligible 0.2ms latency cost.');">
+              Read Article &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- Article 6: Cloud Architecture -->
+        <div class="card blog-card" data-category="cloud" style="display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 0.75rem;">
+            <span class="badge badge-emerald">Cloud &amp; DevOps</span>
+            <span style="font-size: 0.8rem; color: var(--text-dim);">9 min read</span>
+          </div>
+          <h3 class="blog-title" style="margin-bottom: 0.75rem; font-size: 1.2rem;">
+            Kubernetes Pod Disruption Budgets &amp; Multi-Zone Resiliency
+          </h3>
+          <p class="blog-snippet" style="font-size: 0.9rem; margin-bottom: 1.5rem; flex-grow: 1;">
+            Configuring cluster autoscaling, node drain policies, and topology spread constraints to survive total AWS availability zone blackouts with 0 dropped sessions.
+          </p>
+          <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-subtle); padding-top: 1rem; margin-top: auto;">
+            <span style="font-size: 0.8rem; color: var(--text-dim);">Aug 11, 2026</span>
+            <button class="btn btn-sm btn-outline read-article-btn" onclick="openArticleModal('Kubernetes Pod Disruption Budgets & Multi-Zone Resiliency', 'Aug 11, 2026 &bull; David Miller, Cloud Lead', 'Ensuring true 99.999% cloud uptime requires proactive cluster topology. Learn how to configure pod anti-affinity, topology spread constraints across three distinct availability zones, and graceful gRPC shutdown handlers.');">
+              Read Article &rarr;
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Article Modal Dialog -->
+  <div class="modal-backdrop" id="article-modal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="modal-article-title" style="font-size: 1.25rem;">Article Insights</h3>
+        <button class="modal-close-btn" onclick="document.getElementById('article-modal').classList.remove('open');" aria-label="Close Article">
+          <span data-icon="close"></span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="modal-article-meta" style="color: var(--primary); font-size: 0.85rem; font-weight: 600; margin-bottom: 1.25rem;"></div>
+        <div id="modal-article-content" style="color: var(--text-muted); line-height: 1.8; font-size: 1.05rem;"></div>
+        <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-size: 0.85rem; color: var(--text-dim);">Published by NEXVORA Engineering Squad</span>
+          <button class="btn btn-primary btn-sm" onclick="document.getElementById('article-modal').classList.remove('open');">Done Reading</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openArticleModal(title, meta, content) {
+      document.getElementById('modal-article-title').textContent = title;
+      document.getElementById('modal-article-meta').textContent = meta;
+      document.getElementById('modal-article-content').textContent = content;
+      document.getElementById('article-modal').classList.add('open');
+    }
+  </script>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1rem;">
+            <img src="9600f248-9e25-4836-9e12-b158c3783639.png" alt="NEXVORA Logo" class="brand-logo-img">
+            <span>NEXVORA<span class="highlight">.TECH</span></span>
+          </a>
+          <p style="font-size: 0.9rem; line-height: 1.7; margin-bottom: 1.5rem;">
+            NEXVORA TECHNOLOGIES is an enterprise software engineering company delivering bespoke web systems, SaaS platforms, cross-platform mobile apps, and digital infrastructure.
+          </p>
+          <div class="social-links">
+            <a href="https://github.com/Arifkhan1298" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub - Arifkhan1298" data-icon="github"></a>
+            <a href="https://wa.me/923138983870" target="_blank" rel="noopener noreferrer" class="social-link" title="WhatsApp - 03138983870" data-icon="whatsapp"></a>
+            <a href="mailto:arifkhankkhan002@gmail.com" class="social-link" title="Email Arifullah" data-icon="email"></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Company</a></li>
+            <li><a href="services.html">All Services</a></li>
+            <li><a href="solutions.html">Industry Solutions</a></li>
+            <li><a href="projects.html">Portfolio &amp; Work</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="team.html">Our Leadership</a></li>
+            <li><a href="careers.html">Careers (Hiring)</a></li>
+            <li><a href="blog.html">Engineering Blog</a></li>
+            <li><a href="quote.html">Get a Quote</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Enterprise</h4>
+          <ul class="footer-links">
+            <li><a href="client-dashboard.html">Client Portal</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p style="font-size: 0.85rem; margin-bottom: 1rem;">Stay updated with our architectural whitepapers and tech insights.</p>
+          <form onsubmit="event.preventDefault(); window.Nexvora.showToast('Subscribed to NEXVORA Tech Insights!', 'success'); this.reset();" style="display:flex; flex-direction:column; gap:0.6rem;">
+            <input type="email" required placeholder="Enter work email..." class="form-control" style="font-size:0.85rem; padding:0.6rem 0.8rem;">
+            <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 NEXVORA TECHNOLOGIES. All rights reserved. Enterprise-grade software engineering.</div>
+        <div style="display:flex; gap:1.5rem;">
+          <a href="privacy.html" style="color:var(--text-dim);">Privacy</a>
+          <a href="terms.html" style="color:var(--text-dim);">Terms</a>
+          <a href="contact.html" style="color:var(--text-dim);">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Case Study: FinTech Core Gateway & Microservices Architecture by NEXVORA TECHNOLOGIES.">
+  <title>Case Study: FinTech Core Gateway — NEXVORA TECHNOLOGIES</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+  <!-- Top Sticky Header -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="NEXVORA TECHNOLOGIES Home">
+        <img src="9600f248-9e25-4836-9e12-b158c3783639.png" alt="NEXVORA Logo" class="brand-logo-img">
+        <span>NEXVORA<span class="highlight">.TECH</span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="solutions.html" class="nav-link">Solutions</a></li>
+          <li><a href="projects.html" class="nav-link active">Projects</a></li>
+          <li><a href="team.html" class="nav-link">Team</a></li>
+          <li><a href="careers.html" class="nav-link">Careers</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item-dropdown">
+            <a href="javascript:void(0)" class="nav-link dropdown-toggle">
+              <span>Portals</span>
+              <span data-icon="chevronDown"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="client-dashboard.html">Client Portal</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="quote.html" class="btn btn-primary btn-glow">Get a Quote</a>
+      </div>
+
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+        <span data-icon="menu"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Case Study Header -->
+  <section class="section" style="padding-top: 9rem; padding-bottom: 3.5rem;">
+    <div class="container">
+      <div style="margin-bottom: 1.5rem;">
+        <a href="projects.html" style="color: var(--primary); font-size: 0.9rem; display: inline-flex; align-items: center; gap: 0.4rem;">
+          &larr; Back to All Case Studies
+        </a>
+      </div>
+      <div class="badge badge-indigo">Financial Technology Case Study</div>
+      <h1 style="margin: 0.75rem 0 1.25rem 0;">FinTech Core Gateway &amp; Microservices</h1>
+      <p class="section-subtitle" style="max-width: 800px;">
+        Engineering an ultra-high concurrency financial ledger capable of routing 15,000 transactions per second with strict zero-loss guarantees and sub-millisecond settlement times.
+      </p>
+
+      <div style="display: flex; gap: 2rem; margin-top: 2rem; flex-wrap: wrap; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle);">
+        <div>
+          <div style="font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase;">Client Sector</div>
+          <strong style="color: var(--text-main);">Nordic FinTech Group</strong>
+        </div>
+        <div>
+          <div style="font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase;">Engagement Type</div>
+          <strong style="color: var(--text-main);">Full-Cycle Architecture &amp; Execution</strong>
+        </div>
+        <div>
+          <div style="font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase;">Primary Stack</div>
+          <strong style="color: var(--primary);">Go, Redis Cluster, Docker, PostgreSQL</strong>
+        </div>
+        <div>
+          <div style="font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase;">Compliance</div>
+          <strong style="color: var(--success);">PCI-DSS Level 1 &amp; ISO 27001</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metrics Impact Banner -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-box">
+          <div class="stat-number" style="color: var(--primary);">15,000+</div>
+          <div class="stat-label">Transactions / Sec</div>
+          <div class="stat-desc">Peak load capability with zero queuing</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number" style="color: var(--success);">99.999%</div>
+          <div class="stat-label">System Availability</div>
+          <div class="stat-desc">Uninterrupted production uptime</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number" style="color: var(--secondary);">&lt; 3.8ms</div>
+          <div class="stat-label">End-to-End Latency</div>
+          <div class="stat-desc">From ingress gateway to ledger write</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number" style="color: var(--accent);">$0.00</div>
+          <div class="stat-label">Reconciliation Discrepancy</div>
+          <div class="stat-desc">Strict double-entry mathematical ledger</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Deep Dive Content -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="grid-2" style="align-items: flex-start; gap: 3.5rem;">
+        <div>
+          <h2 style="margin-bottom: 1.25rem;">The Engineering Challenge</h2>
+          <p style="margin-bottom: 1.25rem;">
+            The client was struggling with a legacy monolithic PHP/MySQL financial core that suffered severe database lock contention whenever concurrent transaction volumes crossed 800 req/sec. During peak market volatility, transactions were dropping, resulting in expensive manual reconciliations and regulatory compliance warnings.
+          </p>
+
+          <h2 style="margin-top: 2.5rem; margin-bottom: 1.25rem;">Architectural Solution</h2>
+          <p style="margin-bottom: 1.25rem;">
+            NEXVORA TECHNOLOGIES completely redesigned the transaction engine from first principles. We engineered a decoupled event-sourced architecture using compiled Go microservices:
+          </p>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.9rem; margin-bottom: 2rem;">
+            <li style="display: flex; gap: 0.6rem;">
+              <span data-icon="check" style="color: var(--primary);"></span>
+              <span><strong>Memory-Speed Ledger:</strong> An in-memory Redis cluster maintaining append-only transaction journals with instant AOF disk syncing.</span>
+            </li>
+            <li style="display: flex; gap: 0.6rem;">
+              <span data-icon="check" style="color: var(--primary);"></span>
+              <span><strong>Idempotency Enforcers:</strong> Cryptographic SHA-256 idempotency keys preventing any possibility of duplicate charges.</span>
+            </li>
+            <li style="display: flex; gap: 0.6rem;">
+              <span data-icon="check" style="color: var(--primary);"></span>
+              <span><strong>Asynchronous Settlement Queues:</strong> Kafka pipelines offloading database persistence, analytical reporting, and webhook dispatches.</span>
+            </li>
+          </ul>
+
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <button class="btn btn-primary" onclick="window.Nexvora.showToast('Triggering Live Cluster Telemetry Simulation... Throughput: 15,420 tx/s, Error Rate: 0.00%', 'success');">
+              Simulate Live Load Test
+            </button>
+            <a href="quote.html" class="btn btn-outline">Build Similar Architecture</a>
+          </div>
+        </div>
+
+        <!-- Visual Architecture Diagram Card (100% Offline SVG) -->
+        <div class="card" style="padding: 2rem; background: #FFFFFF; border: 1px solid rgba(216, 196, 172, 0.7);">
+          <h4 style="margin-bottom: 1.5rem; color: var(--primary); display: flex; align-items: center; gap: 0.5rem;">
+            <span data-icon="layers"></span> Microservices System Topology
+          </h4>
+          <svg viewBox="0 0 340 320" fill="none" style="width: 100%;">
+            <!-- Client Ingress -->
+            <rect x="95" y="10" width="150" height="36" rx="6" fill="#FAF7F2" stroke="#4A1525" stroke-width="1.5"/>
+            <text x="170" y="32" fill="#4A1525" font-size="11" font-weight="700" text-anchor="middle" font-family="sans-serif">API INGRESS / TLS</text>
+
+            <line x1="170" y1="46" x2="170" y2="70" stroke="#D97D6B" stroke-width="1.5" stroke-dasharray="3 3"/>
+
+            <!-- Gateway Service -->
+            <rect x="70" y="70" width="200" height="42" rx="6" fill="#FAF7F2" stroke="#D97D6B" stroke-width="1.5"/>
+            <text x="170" y="94" fill="#2E0E1B" font-size="11" font-weight="600" text-anchor="middle" font-family="sans-serif">Go Idempotency Engine</text>
+
+            <line x1="120" y1="112" x2="80" y2="150" stroke="#C5A880" stroke-width="1.5"/>
+            <line x1="220" y1="112" x2="260" y2="150" stroke="#C5A880" stroke-width="1.5"/>
+
+            <!-- Cache & Queue Nodes -->
+            <rect x="20" y="150" width="120" height="45" rx="6" fill="#FAF7F2" stroke="#2A7B58" stroke-width="1.5"/>
+            <text x="80" y="176" fill="#2A7B58" font-size="10" font-weight="700" text-anchor="middle" font-family="sans-serif">Redis Journal</text>
+
+            <rect x="200" y="150" width="120" height="45" rx="6" fill="#FAF7F2" stroke="#C27D38" stroke-width="1.5"/>
+            <text x="260" y="176" fill="#C27D38" font-size="10" font-weight="700" text-anchor="middle" font-family="sans-serif">Kafka Message Bus</text>
+
+            <line x1="80" y1="195" x2="130" y2="245" stroke="#2A7B58" stroke-width="1.5"/>
+            <line x1="260" y1="195" x2="210" y2="245" stroke="#C27D38" stroke-width="1.5"/>
+
+            <!-- Relational Persistence -->
+            <rect x="90" y="245" width="160" height="50" rx="8" fill="#FAF7F2" stroke="#4A1525" stroke-width="2"/>
+            <text x="170" y="270" fill="#4A1525" font-size="11" font-weight="700" text-anchor="middle" font-family="sans-serif">PostgreSQL Cluster</text>
+            <text x="170" y="285" fill="#5C4A52" font-size="9" text-anchor="middle" font-family="sans-serif">Master + Multi-Region Replicas</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1rem;">
+            <img src="9600f248-9e25-4836-9e12-b158c3783639.png" alt="NEXVORA Logo" class="brand-logo-img">
+            <span>NEXVORA<span class="highlight">.TECH</span></span>
+          </a>
+          <p style="font-size: 0.9rem; line-height: 1.7; margin-bottom: 1.5rem;">
+            NEXVORA TECHNOLOGIES is an enterprise software engineering company delivering bespoke web systems, SaaS platforms, cross-platform mobile apps, and digital infrastructure.
+          </p>
+          <div class="social-links">
+            <a href="https://github.com/Arifkhan1298" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub - Arifkhan1298" data-icon="github"></a>
+            <a href="https://wa.me/923138983870" target="_blank" rel="noopener noreferrer" class="social-link" title="WhatsApp - 03138983870" data-icon="whatsapp"></a>
+            <a href="mailto:arifkhankkhan002@gmail.com" class="social-link" title="Email Arifullah" data-icon="email"></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Company</a></li>
+            <li><a href="services.html">All Services</a></li>
+            <li><a href="solutions.html">Industry Solutions</a></li>
+            <li><a href="projects.html">Portfolio &amp; Work</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="team.html">Our Leadership</a></li>
+            <li><a href="careers.html">Careers (Hiring)</a></li>
+            <li><a href="blog.html">Engineering Blog</a></li>
+            <li><a href="quote.html">Get a Quote</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Enterprise</h4>
+          <ul class="footer-links">
+            <li><a href="client-dashboard.html">Client Portal</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p style="font-size: 0.85rem; margin-bottom: 1rem;">Stay updated with our architectural whitepapers and tech insights.</p>
+          <form onsubmit="event.preventDefault(); window.Nexvora.showToast('Subscribed to NEXVORA Tech Insights!', 'success'); this.reset();" style="display:flex; flex-direction:column; gap:0.6rem;">
+            <input type="email" required placeholder="Enter work email..." class="form-control" style="font-size:0.85rem; padding:0.6rem 0.8rem;">
+            <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 NEXVORA TECHNOLOGIES. All rights reserved. Enterprise-grade software engineering.</div>
+        <div style="display:flex; gap:1.5rem;">
+          <a href="privacy.html" style="color:var(--text-dim);">Privacy</a>
+          <a href="terms.html" style="color:var(--text-dim);">Terms</a>
+          <a href="contact.html" style="color:var(--text-dim);">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
